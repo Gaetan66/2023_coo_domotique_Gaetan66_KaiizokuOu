@@ -1,1 +1,1 @@
-# 2023_coo_domotique_Gaetan66_KaiizokuOu
+Szezcpanski Gaetan  et Zott Alexis
