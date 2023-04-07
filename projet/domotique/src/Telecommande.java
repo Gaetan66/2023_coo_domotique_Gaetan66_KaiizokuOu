@@ -26,4 +26,8 @@ public class Telecommande {
     public String toString(){
         throw new Error("Code non écrit");
     }
+
+    public Lampe getLampe(int index){
+        return lampes.get(index);
+    }
 }
