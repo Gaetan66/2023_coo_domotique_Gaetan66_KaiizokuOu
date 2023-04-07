@@ -8,23 +8,33 @@ public class Telecommande {
         this.lampes = new ArrayList<Lampe>();
     }
 
-    public void ajouterLampe(Lampe){
-        throw new Error("Code non écrit");
+    public void ajouterLampe(Lampe l) {
+        this.lampes.add(l);
     }
-    public void activerLampe(int){
-        throw new Error("Code non écrit");
+    public void activerLampe(int indiceLampe){
+        this.lampes.get(indiceLampe).allumer();
     }
 
-    public void desactiverLampe(int){
-        throw new Error("Code non écrit");
+    public void desactiverLampe(int indiceLampe){
+        this.lampes.get(indiceLampe).eteindre();
     }
 
     public void activerTout(){
-        throw new Error("Code non écrit");
+        for(int i = 0; i < this.lampes.size(); i++){
+            this.lampes.get(i).allumer();
+        }
     }
 
-    public String toString(){
-        throw new Error("Code non écrit");
+    public String toString() {
+        String r = "";
+        for (int i = 0; i < this.lampes.size(); i++) {
+            if (this.lampes.get(i).isAllume()){
+                r = "On";
+            } else {
+                r = "Off";
+            }
+            return (r);
+        }
     }
 
     public Lampe getLampe(int index){

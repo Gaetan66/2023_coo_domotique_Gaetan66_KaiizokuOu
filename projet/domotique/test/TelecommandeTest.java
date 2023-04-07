@@ -20,7 +20,7 @@ public class TelecommandeTest {
         Lampe l1 = new Lampe("Lampe 1");
         Lampe l1 = new Lampe("Lampe 2");
 
-        tel.
+
         tel.ajouterLampe(l1);
 
         assertEquals(l1,tel.getLampe(0));
