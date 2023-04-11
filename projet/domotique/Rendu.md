@@ -2,6 +2,16 @@
 
 
 
+
+
+## Question 2.2
+
+- Ajout d'une liste(duppliquer)
+- dupliquer les méthodes 
+- Modifier toString/ activerTout
+
+Une bonne dizaine de lignes ont été modifié.
+
 ## Question 2.3
 
 
@@ -12,4 +22,19 @@
 
 
 
-Si le code était bugé , on va aussi copier le bug dans la nouvelle classe donc il faudra corriger la classe de base et la classe copié. Non il ne sera pas maintenable au long terme
+Si le code était bugé , on va aussi copier le bug dans la nouvelle classe donc il faudra corriger la classe de base et la classe copié. Non il ne sera pas maintenable au long terme car si il y a un bug dans le texte de base et qu'on le copie-colle partout dans notre programme cela va devenir ingérable.
+
+
+
+## Question 2.5
+
+
+
+La direction de la flèche (association "liste") indique que  Télecommande dépend de toutes les autres classes. Cela implique que, lorsqu'on modifie les autres classes (Lampe,..) il faut modifier la classe Télécommande.
+
+Si on change le nom des méthodes Hifi, comme on a copié les méthodes de lampes dans la Télécommande, dans les méthodes copiés, on utilise les méthodes allumer et éteindre or si on change leurs noms il faudrait changer aussi les noms dans les fonctions de Télécommande.
+
+
+
+## Question 3.1
+
