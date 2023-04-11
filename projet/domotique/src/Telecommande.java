@@ -38,6 +38,9 @@ public class Telecommande {
         for(int i = 0; i < this.lampes.size(); i++){
             this.lampes.get(i).allumer();
         }
+        for(int i = 0; i < this.hifis.size(); i++){
+            this.hifis.get(i).allumer();
+        }
     }
 
 
