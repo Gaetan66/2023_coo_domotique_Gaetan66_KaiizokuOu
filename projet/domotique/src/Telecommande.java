@@ -8,16 +8,16 @@ public class Telecommande {
         this.appareils = new ArrayList<Appareil>();
     }
 
-    public void ajouter(Appareil l) {
+    public void ajouterAppareil(Appareil l) {
         this.appareils.add(l);
     }
 
-    public void activer(int indice){
+    public void activerAppareil(int indice){
         this.appareils.get(indice).allumer();
     }
 
 
-    public void desactiver(int indice){
+    public void desactiverAppareil(int indice){
         this.appareils.get(indice).eteindre();
     }
 
@@ -37,5 +37,9 @@ public class Telecommande {
             }
         }
         return r;
+    }
+
+    public int getNombre(){
+        return this.appareils.size();
     }
 }

@@ -42,6 +42,10 @@ public class Lampe implements Appareil{
 		this.allume = false;
 	}
 
+	public boolean isAllume() {
+		return this.allume;
+	}
+
 	/**
 	 * retourne le descriptif de la lampe sous la forme nom + "On"/"Off"
 	 */
