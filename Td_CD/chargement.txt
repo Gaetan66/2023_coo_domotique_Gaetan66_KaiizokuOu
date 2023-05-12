@@ -1,0 +1,6 @@
+Le main lance la méthode ChargeurMagasin(rep) qui crée un objet de type chargeurMagasin
+qui va lui même être charger par le main par la méthode chargerMagasin() et va ensuite créer
+un objet de type magasin. De plus, cet objet chargeurMagasin va creer un objet de type chargeurCD
+puis va le charger avec la méthode ChargerCD(). Cet nouvel objet va créer un nouvel objet de 
+type cd à partir d'un artiste et d'un nomCd puis va extraire et ajouter des pistes. Enfin le
+l'objet chargeurMagasin ajoutr dans l'objet Magasin l'objet CD.
