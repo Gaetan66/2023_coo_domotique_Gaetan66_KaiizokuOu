@@ -30,10 +30,10 @@ public class MainChargeurMagasin {
 		sc.nextLine();
 		sc.close();
 
-		resultat.trierAriste();
-		System.out.println(resultat);
+		//resultat.trierAriste();
+		//System.out.println(resultat);
 
-		resultat.trierAlbum();
+		resultat.TrieSelection();
 		System.out.println(resultat);
 
 	}
