@@ -67,12 +67,12 @@ public class Magasin {
 			res=this.listeCds.get(i);
 		return(res);
 	}
-	public void TrieSelection(){
+	public void TrieArstiste(comparateurCD C){
 		ArrayList<CD> listeTrier = new ArrayList<CD>();
 		while(listeCds.size() > 0){
 			int min = 0;
 			for(int i = 1; i < listeCds.size() ; i++){
-				if(listeCds.get(min).getNomCD().compareTo(listeCds.get(i).getNomCD()) > 0){
+				if(!C.etreAvant(listeCds.get(min),listeCds.get(i))){
 					min = i;
 				}
 			}
