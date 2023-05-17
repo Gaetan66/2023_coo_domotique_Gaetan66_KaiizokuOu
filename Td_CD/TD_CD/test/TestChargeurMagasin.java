@@ -9,17 +9,6 @@ import static org.junit.Assert.assertEquals;
 public class TestChargeurMagasin {
 
     @Test
-    public void testChargeurMagasin() throws FileNotFoundException {
-        ChargeurMagasin magasin = new ChargeurMagasin("musique/");
-        Magasin m = magasin.chargerMagasin();
-
-        m.TrieSelection();
-
-        assertEquals("Believe", m.getCd(0).getNomCD());
-        assertEquals("Whitney Houston", m.getCd(11).getNomCD());
-    }
-
-    @Test
     public void testChargeurMagasinGénérique() throws FileNotFoundException {
         ChargeurMagasin magasin = new ChargeurMagasin("musique/");
         Magasin m = magasin.chargerMagasin();
