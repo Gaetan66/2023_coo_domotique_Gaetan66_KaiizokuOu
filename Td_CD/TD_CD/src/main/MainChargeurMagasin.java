@@ -33,8 +33,8 @@ public class MainChargeurMagasin {
 		//resultat.trierAriste();
 		//System.out.println(resultat);
 
-		resultat.TrieSelection();
-		System.out.println(resultat);
+		//resultat.TrieSelection();
+		//System.out.println(resultat);
 
 	}
 
