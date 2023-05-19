@@ -1,9 +1,12 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import XML.ChargeurMagasin;
 import donnees.CD;
-import XML.ChargeurCD;
+import donnees.Magasin;
+import donnees.comparateurAlbum;
 
 /**
  * un main permettant de charger un CD
@@ -19,10 +22,15 @@ public class MainChargeurCD {
 	 *             si fichier inexistant
 	 */
 	public static void main(String args[]) throws IOException {
-		String nomFichier = "musicbrainz/0117b967-d066-4ce1-bf7f-f2b34c063ed3.xml";
-		ChargeurCD charge = new ChargeurCD(nomFichier);
-		CD c = charge.chargerCD();
-		System.out.println(c);
+
+		ChargeurMagasin magasin = new ChargeurMagasin("TD_CD/musique/");
+		Magasin m = magasin.chargerMagasin();
+		comparateurAlbum comparateur = new comparateurAlbum();
+		ArrayList<CD> a = new ArrayList<CD>();
+		a = m.trouverNbPistes(13);
+		for(int i = 0; i < a.size(); i++){
+			System.out.println(a.get(i));
+		}
 	}
 
 }

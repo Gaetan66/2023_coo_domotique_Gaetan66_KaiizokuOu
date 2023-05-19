@@ -1,6 +1,7 @@
 package donnees;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
@@ -67,6 +68,7 @@ public class Magasin {
 			res=this.listeCds.get(i);
 		return(res);
 	}
+
 	public void TrieArstiste(comparateurCD C){
 		ArrayList<CD> listeTrier = new ArrayList<CD>();
 		while(listeCds.size() > 0){
@@ -82,5 +84,36 @@ public class Magasin {
 		listeCds = listeTrier;
 	}
 
+	public ArrayList<CD> chercherArtiste(String artiste){
+		ArrayList<CD> albums = new ArrayList<CD>();
+		for (int i = 0; i < listeCds.size(); i++) {
+			if (artiste.equals(listeCds.get(i).getNomArtiste())) {
+				albums.add(listeCds.get(i));
+			}
+		}
+		return albums;
+	}
+
+	public ArrayList<CD> trouverArtiste(String artiste){
+		SelecteurArtiste s = new SelecteurArtiste(artiste);
+		ArrayList<CD> albums = new ArrayList<CD>();
+		for (int i = 0; i < listeCds.size(); i++) {
+			if(s.garderCD(listeCds.get(i))){
+				albums.add(listeCds.get(i));
+			}
+		}
+		return albums;
+	}
+
+	public ArrayList<CD> trouverNbPistes(int nb){
+		SelecteurNbPistes s = new SelecteurNbPistes(nb);
+		ArrayList<CD> albums = new ArrayList<CD>();
+		for (int i = 0; i < listeCds.size(); i++) {
+			if(s.garderCD(listeCds.get(i))){
+				albums.add(listeCds.get(i));
+			}
+		}
+		return albums;
+	}
 
 }

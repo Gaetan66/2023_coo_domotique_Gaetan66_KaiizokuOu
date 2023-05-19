@@ -103,5 +103,11 @@ public class CD {
 	public String getNomArtiste(){
 		return this.nomArtiste;
 	}
+	public int getNbPistes(){
+		return this.pistes.size();
+	}
 
+	public List<InfoPiste> getPistes() {
+		return pistes;
+	}
 }
