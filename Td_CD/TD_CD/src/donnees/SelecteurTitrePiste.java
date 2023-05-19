@@ -10,10 +10,14 @@ public class SelecteurTitrePiste implements Selecteur{
 
     @Override
     public boolean garderCD(CD cd) {
-
-        if(.equals(nomTitre)){
-            return true;
-        }else{
-            return false;
+        boolean b = false;
+        for (InfoPiste piste : cd.getPistes()) {
+            if (piste.getNomPiste().equals(nomTitre)) {
+                b = true;
+            }
+        }
+        return b;
     }
 }
+
+

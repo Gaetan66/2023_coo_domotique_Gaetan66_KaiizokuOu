@@ -116,4 +116,15 @@ public class Magasin {
 		return albums;
 	}
 
+	public ArrayList<CD> trouverTitrePistes(String nom){
+		SelecteurTitrePiste s = new SelecteurTitrePiste(nom);
+		ArrayList<CD> albums = new ArrayList<CD>();
+		for (int i = 0; i < listeCds.size(); i++) {
+			if(s.garderCD(listeCds.get(i))){
+				albums.add(listeCds.get(i));
+			}
+		}
+		return albums;
+	}
+
 }

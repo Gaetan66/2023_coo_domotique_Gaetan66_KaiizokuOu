@@ -27,7 +27,7 @@ public class MainChargeurCD {
 		Magasin m = magasin.chargerMagasin();
 		comparateurAlbum comparateur = new comparateurAlbum();
 		ArrayList<CD> a = new ArrayList<CD>();
-		a = m.trouverNbPistes(13);
+		a = m.trouverTitrePistes("Je suis");
 		for(int i = 0; i < a.size(); i++){
 			System.out.println(a.get(i));
 		}
